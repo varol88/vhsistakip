@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAROL-TAKİP DOSYAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header ve Navigasyon -->
+  <header>
+    <div class="container">
+        <nav>
+            <!-- Logo resmi ve tıklanabilir link -->
+            <a href="index.html" class="logo">
+                <img src="image/home.png" alt="Site Logo" />
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+              <li><a href="video.html">VİDEOLARIM</a></li>
+              <li><a href="enjeksiyon.html">ENJEKSİYON KALIPLARI</a></li>
+                <li><a href="#">KALIP BİLGİLERİ</a></li>
+                <li><a href="ürünbilgi.html">ÜRÜN BİLGİLERİ</a></li>
+                <li><a href="#">REVİZE İŞLEMLERİ</a></li>
+                <li><a href="istakip.html">İŞ TAKİP</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">&#9776;</div>
+        </nav>
+    </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>VAROL ARABACIOĞLU</h1>
+      <p>KİŞİSEL İŞ TAKİP SİSTEMİ</p>
+    </div>
+  </section>
+
+ <!-- Makale Alanı -->
+<section class="articles">
+    <div class="article">
+        <h2>Makale Başlığı 1</h2>
+        <p>.Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek</p>
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          Bu alana yazınızı veya makalenizi yazabilirsiniz. İçerik burada görünecek
+          
+        
+    </div>
+
+    <!-- Küçük Haber Kartları -->
+        <section class="news-grid">
+            <div class="news-card">
+                <img src="image/tk_1.jpg" alt=" ">
+                <h3><a href="">SAC ÜRÜNLER</a>                
+                <div class="button-container">    
+                    <a href="/ürünler/panikbar/sacürünler.html" class="button">GÖRÜNTÜLE</a>
+                </div>
+                </div>
+
+                <div class="news-card">
+                <img src="image/tk_1.jpg" alt=" ">
+                <h3><a href="">SAC ÜRÜNLER</a>                
+                <div class="button-container">    
+                    <a href="/ürünler/panikbar/sacürünler.html" class="button">GÖRÜNTÜLE</a>
+                </div>
+                </div>
+
+                <div class="news-card">
+                <img src="image/tk_1.jpg" alt=" ">
+                <h3><a href="">SAC ÜRÜNLER</a>                
+                <div class="button-container">    
+                    <a href="/ürünler/panikbar/sacürünler.html" class="button">GÖRÜNTÜLE</a>
+                </div>
+                </div>
+
+                <div class="news-card">
+                <img src="image/tk_1.jpg" alt=" ">
+                <h3><a href="">SAC ÜRÜNLER</a>                
+                <div class="button-container">    
+                    <a href="/ürünler/panikbar/sacürünler.html" class="button">GÖRÜNTÜLE</a>
+                </div>
+                </div>
+
+                <div class="news-card">
+                <img src="image/tk_1.jpg" alt=" ">
+                <h3><a href="">SAC ÜRÜNLER</a>                
+                <div class="button-container">    
+                    <a href="/ürünler/panikbar/sacürünler.html" class="button">GÖRÜNTÜLE</a>
+                </div>
+                </div>
+
+                <div class="news-card">
+                <img src="image/tk_1.jpg" alt=" ">
+                <h3><a href="">SAC ÜRÜNLER</a>                
+                <div class="button-container">    
+                    <a href="/ürünler/panikbar/sacürünler.html" class="button">GÖRÜNTÜLE</a>
+                </div>
+                </div>
+
+                
+
+
+  
+
+
+  <!-- Footer ------------------------------------------------------------------------------------------------->
+  <footer>
+    <div class="container">
+      <p>&copy; VAROL ARABACIOĞLU  KİŞİSEL İŞ TAKİP SİSTEMİDİR.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sayfa yüklendiğinde konsola mesaj
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Web sitesi başarıyla yüklendi!');
+
+      // Gönderi kartlarını tıklanabilir yap
+      const postCards = document.querySelectorAll('.post-card');
+      postCards.forEach(card => {
+        card.addEventListener('click', function() {
+          const link = this.querySelector('.read-more');
+          window.location.href = link.href;
+        });
+      });
+
+      // Mobil menü toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

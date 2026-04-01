@@ -1,0 +1,424 @@
+/* Genel Stiller */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Stili */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+    height: 50px;   /* Logo yüksekliği */
+    width: auto;    /* Oranını korur */
+    display: block; /* Gereksiz boşlukları kaldırır */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #3498db;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Hero Bölümü */
+.hero {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Blog Kartları */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.post-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-img {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.post-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.post-content p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+   position: fixed;
+ bottom: 0px;
+ left: 0px;
+ width: 100%;
+ height: 50px;
+ padding:15px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #2c3e50;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* makale  */
+
+.articles {
+    max-width: auto;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.article {
+    background-color: #f5f5f5;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.article h2 {
+    color: #333;
+}
+
+.article p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+/* Ana içerik (alt kısım) */
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Genişlik azaldıkça alt satıra geç */
+    gap: 20px;
+    /* Kartlar arası boşluk */
+    justify-content: center;
+    /* Ortala */
+    padding: 50px;
+    text-decoration: none;
+}
+
+.news-card {
+    flex: 1 1 calc(33.333% - 20px);
+    /* Kart genişliği: %33.33 */
+    max-width: 300px;
+    /* Maksimum genişlik belirle */
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border: 1px solid #141313;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.news-grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Genişlik azaldıkça alt satıra geç */
+    gap: 20px;
+    /* Kartlar arası boşluk */
+    justify-content: center;
+    /* Ortala */
+    padding: 50px;
+    text-decoration: none;
+}
+
+
+
+.news-card2 {
+    flex: 1 1 calc(33.333% - 50px);
+    /* Kart genişliği: %33.33 */
+    max-width: 400px;
+    /* Maksimum genişlik belirle */
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border: 1px solid #141313;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.news-card2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+/* Buton Genel Stil */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    /* Yükseklik ve genişlik */
+    background-color: #d46103;
+    /* Buton rengi */
+    color: white;
+    /* Yazı rengi */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    /* Kenar yuvarlama */
+    cursor: pointer;
+    /* İmleci el simgesine çevirir */
+    font-size: 16px;
+    /* Yazı boyutu */
+    font-weight: bold;
+    /* Kalın yazı */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Hover etkisi */
+    border: none;
+    /* Buton etrafında kenarlık yok */
+    margin: 10px;
+    /* Butonlar arasındaki boşluk */
+}
+
+/* Hover Durumu */
+.button:hover {
+    background-color: #b8aa60;
+    /* Hoverda renk değişikliği */
+    transform: translateY(-3px);
+    /* Hoverda butonu hafif yukarı kaydır */
+}
+
+/* Focus Durumu */
+.button:focus {
+    outline: none;
+    /* Odaklanıldığında kenarlık gösterilmez */
+    box-shadow: 0 0 5px rgba(226, 186, 245, 0.5);
+    /* Odaklanıldığında hafif gölge */
+}
+
+/* Mobil Uyumluluk İçin */
+@media (max-width: 768px) {
+    .button {
+        padding: 10px 20px;
+        /* Mobilde buton boyutunu küçült */
+        font-size: 14px;
+        /* Mobilde yazı boyutunu küçült */
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        padding: 8px 15px;
+        /* Küçük ekranlarda daha küçük buton */
+        font-size: 12px;
+        /* Küçük ekranlarda yazı boyutunu küçült */
+    }
+}
+.news-card h3 a {
+    text-decoration: none;  /* Alt çizgiyi kaldırır */
+    color: #000;            /* Yazı rengini siyah yapar, isteğe göre değiştir */
+}
+
+/* buton özellikleri  */
+.news-grid {
+  display: flex;
+  gap: 20px; /* kartlar arası boşluk */
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* buton en alta kayar */
+  width: 300px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.button-container {
+  margin-top: auto; /* butonu alta iter */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #e77d03;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* videolar  */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video-container video {
+  width: 500px;
+  height: 300px;
+  margin-bottom: 30px; /* Satırlar arasında boşluk */
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Mobil cihaz uyumu */
+@media (max-width: 1200px) {
+  .video-container video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+

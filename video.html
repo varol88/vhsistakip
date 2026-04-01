@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yan Yana Videolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+        <nav>
+            <!-- Logo resmi ve tıklanabilir link -->
+            <a href="index.html" class="logo">
+                <img src="image/home.png" alt="Site Logo" />
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+              <li><a href="video.html">VİDEOLARIM</a></li>
+              <li><a href="enjeksiyon.html">ENJEKSİYON KALIPLARI</a></li>
+                <li><a href="#">KALIP BİLGİLERİ</a></li>
+                <li><a href="ürünbilgi.html">ÜRÜN BİLGİLERİ</a></li>
+                <li><a href="#">REVİZE İŞLEMLERİ</a></li>
+                <li><a href="istakip.html">İŞ TAKİP</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">&#9776;</div>
+        </nav>
+    </div>
+</header>
+
+ <div class="video-container">
+    <div class="video-card">
+      <h3>VMK REVİZE VİDEO </h3>
+      <video controls>
+        <source src="videos/vmk_revize.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <p>MAKAS REVİZEYONLARI İLE İLGİLİ  VİDEO</p>
+    </div>
+
+    <div class="video-card">
+      <h3>Şehir Manzarası</h3>
+      <video controls>
+        <source src="videos/dene.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <p>Bu video şehir yaşamından kesitler gösteriyor.</p>
+    </div>
+
+    <div class="video-card">
+      <h3>Şehir Manzarası</h3>
+      <video controls>
+        <source src="videos/varol.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <p>Bu video şehir yaşamından kesitler gösteriyor.</p>
+    </div>
+
+
+    <div class="video-card">
+      <h3>Şehir Manzarası</h3>
+      <video controls>
+        <source src="videos/varol.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <p>Bu video şehir yaşamından kesitler gösteriyor.</p>
+    </div>
+
+
+    <div class="video-card">
+      <h3>Şehir Manzarası</h3>
+      <video controls>
+        <source src="videos/varol.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <p>Bu video şehir yaşamından kesitler gösteriyor.</p>
+    </div>
+
+    <div class="video-card">
+      <h3>Şehir Manzarası</h3>
+      <video controls>
+        <source src="videos/varol.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <p>Bu video şehir yaşamından kesitler gösteriyor.</p>
+    </div>
+
+
+
+
+    <!-- İstersen aynı yapıyı çoğaltarak yeni videolar ekleyebilirsin -->
+  </div>
+
+   
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+
+
+  
+
+
+  <!-- Footer ------------------------------------------------------------------------------------------------->
+  <footer>
+    <div class="container">
+      <p>&copy; VAROL ARABACIOĞLU  KİŞİSEL İŞ TAKİP SİSTEMİDİR.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sayfa yüklendiğinde konsola mesaj
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Web sitesi başarıyla yüklendi!');
+
+      // Gönderi kartlarını tıklanabilir yap
+      const postCards = document.querySelectorAll('.post-card');
+      postCards.forEach(card => {
+        card.addEventListener('click', function() {
+          const link = this.querySelector('.read-more');
+          window.location.href = link.href;
+        });
+      });
+
+      // Mobil menü toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
